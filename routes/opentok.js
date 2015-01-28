@@ -11,7 +11,6 @@ router.get('/new',function(req,res){
   		if (err) 
   			return res.status(500).json({error:err})
 
-  		console.log(session)
   		res.status(200).json({session:{
   			id:session.sessionId
   		}})
@@ -19,7 +18,9 @@ router.get('/new',function(req,res){
 })
 .get('/token/:session',function(req,res){
 
-	token = opentok.generateToken(req.params.session);
+	token = opentok.generateToken(req.params.session,{
+		expireTime: (new Date().getTime() / 1000)+( 60 * 60) //let token expire after one hour
+	});
 	res.status(200).json({token:token})
 })
 module.exports = router;

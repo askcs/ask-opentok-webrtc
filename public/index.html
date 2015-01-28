@@ -36,7 +36,7 @@
                         <div id="main-navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li class="video-gesprek active"><a>Video Gesprek</a></li>
-                                <li class="gesprekken"><a>Gesprekken</a></li>
+                                <!--<li class="gesprekken"><a>Gesprekken</a></li>-->
                                 <!--<li class="hulp-vragen"><a>Hulp Vragen</a></li>-->
                             </ul>
                         </div>
@@ -50,11 +50,11 @@
                 <div id="current-call">
                     <div class="alert alert-info" role="alert" style="margin-top: 20px;">Uw video gesprek wordt voorbereid....</div>
                     <div id="videos">
-                        <div class="video-container caller">
-                            <div  autoplay="autoplay" id="callerVideo"></div>
+                        <div class="video-container caller" id="callerVideo">
+                            <!--<video  autoplay="autoplay" id="callerVideo"></video>-->
                         </div>
-                        <div class="video-container self" >
-                            <div  autoplay="autoplay"  id="selfVideo" muted="muted" volume="0" ></div>
+                        <div class="video-container self" id="selfVideo">
+                            <!--<div  autoplay="autoplay" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0" ></div>-->
                         </div>
                         <!-- each caller video needs to be in it's own div so it's close button can be positioned correctly -->
                     </div>
