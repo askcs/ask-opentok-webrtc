@@ -1,0 +1,125 @@
+#stuffToSend {
+    width:300px;
+}
+#sendMessageArea{
+    float:left;
+    width:400px;
+    padding-right:20px;
+}
+#sendMessageText{
+    width:100%;
+}
+#conversation {
+    height:150px;
+    border:solid 1px gray;
+    overflow-y:scroll;
+}
+.roomDiv {
+    margin-bottom: 15px;
+    background-color: antiquewhite;
+}
+.roomOccupants{
+    margin-left: 20px;
+}
+#main.connected>.preconnection{
+    display:none;
+}
+#main.notconnected>.postconnection{
+    display:none;
+}
+.quickJoin {
+    display: inline-block;
+}
+#quickJoinBlock {
+    display: inline-block;
+}
+
+#current-call {
+    position:relative;
+    max-width: 1305px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+#connectControls {
+    float:left;
+    width:250px;
+    text-align:center;
+    border: 2px solid black;
+    height: 120px;
+}
+
+#otherClients {
+    overflow-y:scroll;
+}
+
+#videos{
+    position: relative;
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-container.caller {
+    max-width: 1000px;
+}
+
+.video-container.self {
+    width: 33%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#callerVideo, #selfVideo{
+    position: relative;
+    width: 100%;
+    margin: 3px;
+    height: auto;
+    max-height: 720px;
+    border:1px solid gray;
+}
+
+#callerVideo {
+    max-height: 90vh;
+    max-height: calc(100vh - 65px);
+}
+
+
+video {
+    background: url(/images/ajax-loader.gif);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+table th{
+    padding-right: 10px
+}
+
+@media all and (min-width: 901px) {
+    .video-container.self, #selfVideo {
+        width:300px;
+    }
+}
+
+@media all and (max-width: 900px) {
+    /*.video-container.self {
+        margin-left: auto;
+        margin-right: auto;
+    }*/
+}
+
+@media all and (max-width: 600px) and (max-aspect-ratio: 8/10) {
+    .video-container.self {
+        position: relative;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

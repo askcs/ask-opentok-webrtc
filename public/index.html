@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--skip-->
+        <title>ASK Fast demo</title>
+
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-custom.css">
+        <link rel="stylesheet" type="text/css" href="css/landing.css" />
+        <link rel="stylesheet" type="text/css" href="css/askfast.css" />
+
+        <!-- Prettify Code -->
+        <script type="text/javascript" src="js/prettify/prettify.js"></script>
+        <script type="text/javascript" src="js/prettify/loadAndFilter.js"></script>
+        <script type="text/javascript" src="js/prettify/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/prettify/prettify.css" />
+
+        <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+
+    </head>
+    <body onload="appInit();">
+        <!--hide-->
+        <div id="container">
+
+            <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand">TeamUp</a>
+                        </div>
+                        <div id="main-navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="video-gesprek active"><a>Video Gesprek</a></li>
+                                <li class="gesprekken"><a>Gesprekken</a></li>
+                                <!--<li class="hulp-vragen"><a>Hulp Vragen</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="main" class="container-fluid">
+                <!-- Main Content -->
+                <!--show-->
+                <div id="current-call">
+                    <div class="alert alert-info" role="alert" style="margin-top: 20px;">Uw video gesprek wordt voorbereid....</div>
+                    <div id="videos">
+                        <div class="video-container caller">
+                            <div  autoplay="autoplay" id="callerVideo"></div>
+                        </div>
+                        <div class="video-container self" >
+                            <div  autoplay="autoplay"  id="selfVideo" muted="muted" volume="0" ></div>
+                        </div>
+                        <!-- each caller video needs to be in it's own div so it's close button can be positioned correctly -->
+                    </div>
+                </div>
+                <!-- hide -->
+                <div id="help-request" style="display:none">
+                    <div class="page-header">
+                        <h2>Hulp Vragen</h2>
+                    </div>
+                    <div class="page-content">
+                        <p id="error" style="display:none;background: red"></p>
+                        <form>
+                            Uw telefoon nummer: <input type="text" id="roomnum"></input><br><br>
+                            (DEMO) To email adress: <input type="text" id="email"></input><br><br>
+                            <a href="#" id="submit" class="button">Click hier om hulp te vragen</a >
+                        </form>
+                    </div>
+                </div>
+                <div id="connectControls" style="display:none">
+                    <div id="iam">Wachten op hulp...</div>
+                    <br />
+                    <strong>Hulp verleners:</strong>
+                    <div id="otherClients"></div>
+                </div>
+                <!-- hide -->
+                <div id="active-calls" style="display:none">
+                    <div class="page-header">
+                        <h2>Actieve gesprekken</h2>
+                    </div>
+                    <div class="page-content">
+                        <table class="demo_table">
+                            <thead>
+                                <tr>
+                                    <th>Room name: </th>
+                                    <th>Bezetting: </th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody id="demo_table_body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- End Main Content -->
+            </div>
+    </body>
+        <script src="//static.opentok.com/webrtc/v2.2/js/opentok.min.js" ></script>
+        <script type="text/javascript" src="js/bootstrap-custom.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+</html>

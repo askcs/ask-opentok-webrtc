@@ -1,0 +1,639 @@
+/*
+        General CSS for easyrtc local landing site.
+        Only general layout is here.
+        Any CSS related directly to the operation of a demo is kept in another file.
+*/
+/* teamup brown:  #833c11 */
+/* teamup turq:   #1dc8b6 */
+/* teamup orange: #F5A962 */
+/* teamup bg:     #fffaf0 */
+body {
+    background-color:#fffaf0;
+}
+
+#container {
+}
+
+#header {
+    background-color: #833c11;
+    height: 50px;
+}
+
+#logo_teamup {
+    width: 126px;
+    height: 50px;
+}
+
+#main {
+    overflow:hidden;
+    margin-top:50px;
+}
+
+#footer {
+    font-size: small;
+    padding: 5px;
+    color:white;
+    min-height:60px;
+}
+#footer p {
+    margin: 0px;
+    color:white;
+    text-align:center;
+}
+#footer a {
+    color:white;
+}
+#license {
+    font-size: x-small;
+}
+#logo_priologic {
+    float:left;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+#logo_pb_easyrtc {
+    float:right;
+    margin-left: 10px;
+}
+
+hr {
+    clear:both;
+}
+
+.prettyprint {
+    white-space: pre-wrap;
+    max-height:400px;
+    overflow-y:scroll;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #fff2d7;
+}
+
+.nav > li > a > img {
+    max-width: none;
+}
+
+.nav > .pull-right {
+    float: right;
+}
+
+.nav-header {
+    display: block;
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #999;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.nav .dropdown-toggle .caret {
+    border-top-color: #1dc8b6;
+    border-bottom-color: #1dc8b6;
+    margin-top: 6px;
+}
+
+.nav .dropdown-toggle:hover .caret,
+.nav .dropdown-toggle:focus .caret {
+    border-top-color: #138579;
+    border-bottom-color: #138579;
+}
+
+.nav .active .dropdown-toggle .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+
+.nav > .dropdown.active > a:hover,
+.nav > .dropdown.active > a:focus {
+    cursor: pointer;
+}
+
+.nav > li.dropdown.open.active > a:hover,
+.nav > li.dropdown.open.active > a:focus {
+    color: #fff;
+    background-color: #999;
+    border-color: #999;
+}
+
+.nav li.dropdown.open .caret,
+.nav li.dropdown.open.active .caret,
+.nav li.dropdown.open a:hover .caret,
+.nav li.dropdown.open a:focus .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.nav > .disabled > a {
+    color: #999;
+}
+
+.nav > .disabled > a:hover,
+.nav > .disabled > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+    cursor: default;
+}
+
+
+.navbar-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    /*  @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);*/
+    /*  border: 1px solid $navbarBorder;*/
+    border-radius: 4px;
+    /*  @include box-shadow(0 1px 4px rgba(0,0,0,.065));*/
+}
+
+.navbar .container {
+    width: auto;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+}
+
+.navbar-text {
+    margin-bottom: 0;
+    line-height: 50px;
+    color: #777;
+}
+
+.navbar-link {
+    color: #777;
+}
+.navbar-link:hover, .navbar-link:focus {
+    color: #333;
+}
+
+.navbar .btn,
+.navbar .btn-group {
+    margin-top: 10px;
+}
+
+.navbar .btn-group .btn,
+.navbar .input-prepend .btn,
+.navbar .input-append .btn,
+.navbar .input-prepend .btn-group,
+.navbar .input-append .btn-group {
+    margin-top: 0;
+}
+
+.navbar-form {
+    margin-bottom: 0;
+    *zoom: 1;
+}
+.navbar-form:before, .navbar-form:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.navbar-form:after {
+    clear: both;
+}
+.navbar-form input,
+.navbar-form select,
+.navbar-form .radio,
+.navbar-form .checkbox {
+    margin-top: 10px;
+}
+.navbar-form input,
+.navbar-form select,
+.navbar-form .btn {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.navbar-form input[type="image"],
+.navbar-form input[type="checkbox"],
+.navbar-form input[type="radio"] {
+    margin-top: 3px;
+}
+.navbar-form .input-append,
+.navbar-form .input-prepend {
+    margin-top: 5px;
+    white-space: nowrap;
+}
+.navbar-form .input-append input,
+.navbar-form .input-prepend input {
+    margin-top: 0;
+}
+
+.navbar-search {
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.navbar-search .search-query {
+    margin-bottom: 0;
+    padding: 4px 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    border-radius: 15px;
+}
+
+.navbar-static-top {
+    position: static;
+    margin-bottom: 0;
+}
+.navbar-static-top .navbar-inner {
+    border-radius: 0;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+    border-width: 0 0 1px;
+}
+
+.navbar-fixed-bottom .navbar-inner {
+    border-width: 1px 0 0;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-fixed-bottom .navbar-inner {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+}
+
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+    width: 940px;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-fixed-bottom {
+    bottom: 0;
+}
+.navbar-fixed-bottom .navbar-inner {
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav {
+    font-weight: bold;
+    margin: 0 10px;
+    text-transform: uppercase;
+    float: left;
+}
+
+.navbar .nav.pull-right {
+    float: right;
+    margin-right: 0;
+}
+
+.navbar .nav.pull-right .navbar-btn:hover {
+    background-color: #f5a962;
+}
+.navbar .nav.pull-right .navbar-btn a {
+    padding: 11px 13px;
+}
+
+.navbar .nav > li > a {
+    float: none;
+    padding: 15px 15px 15px;
+    color: #777;
+    text-decoration: none;
+}
+
+.navbar .nav .dropdown-toggle .caret {
+    margin-top: 8px;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+    background-color: transparent;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+    color: #555;
+    text-decoration: none;
+    background-color: transparent
+    /*  @include box-shadow(inset 0 3px 8px rgba(0,0,0,.8));*/
+}
+
+.navbar .btn-navbar {
+    display: none;
+    float: right;
+    padding: 7px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ededed;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
+    background-image: linear-gradient(to bottom, #f2f2f2, #e6e6e6);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFE6E6E6', GradientType=0);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #e6e6e6;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+.navbar .btn-navbar:hover, .navbar .btn-navbar:focus, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
+    color: #fff;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+}
+.navbar .btn-navbar:active, .navbar .btn-navbar.active {
+    background-color: #cccccc \9;
+}
+
+.navbar .btn-navbar .icon-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #f5f5f5;
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+    margin-top: 3px;
+}
+
+.navbar-inverse .navbar-inner {
+    /*    @include gradient-vertical($navbarInverseBackgroundHighlight, $navbarInverseBackground);*/
+    border-color: #3f382a;
+    background-color: #833c11;
+}
+
+.navbar-inverse {
+    background-color: #833c11;
+}
+.navbar-inverse .brand,
+.navbar-inverse .nav > li {
+    margin-left: 10px;
+}
+.navbar-inverse .brand #account,
+.navbar-inverse .nav > li #account {
+    padding: 5px;
+}
+.navbar-inverse .brand a,
+.navbar-inverse .nav > li a {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.navbar-inverse .brand a:hover, .navbar-inverse .brand a:focus,
+.navbar-inverse .nav > li a:hover,
+.navbar-inverse .nav > li a:focus {
+    color: #f5a962;
+}
+.navbar-inverse .brand a span,
+.navbar-inverse .nav > li a span {
+    padding-top: 11px;
+    display: inline-block;
+    margin-left: 6px;
+}
+.navbar-inverse .brand {
+    color: #fff;
+}
+.navbar-inverse .navbar-text {
+    color: #f7f5eb;
+}
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
+    background-color: transparent;
+    color: #f5a962;
+}
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+    color: #f5a962
+}
+
+.navbar-inverse .navbar-link {
+    color: #fff;
+}
+.navbar-inverse .navbar-link:hover, .navbar-inverse .navbar-link:focus {
+    color: #f5a962;
+}
+
+.navbar-inverse .btn-navbar {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #2b261d;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#252119), to(#342e23));
+    background-image: -webkit-linear-gradient(top, #252119, #342e23);
+    background-image: linear-gradient(to bottom, #252119, #342e23);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF252119', endColorstr='#FF342E23', GradientType=0);
+    border-color: #342e23 #342e23 #060504;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #342e23;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.navbar-inverse .btn-navbar:hover, .navbar-inverse .btn-navbar:focus, .navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active, .navbar-inverse .btn-navbar.disabled, .navbar-inverse .btn-navbar[disabled] {
+    color: #fff;
+    background-color: #342e23;
+    *background-color: #242119;
+}
+.navbar-inverse .btn-navbar:active, .navbar-inverse .btn-navbar.active {
+    background-color: #15130e \9;
+}
+
+
+.navbar {
+    border: none;
+}
+
+.navbar-brand {
+    z-index: 100;
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding-bottom: 0;
+    text-indent: -9999px;
+    font-size: 20px;
+    background-image: url("../images/logoHeader.png");
+    width: 126px;
+    height: 50px;
+    float: left;
+    display: block;
+    font-weight: 200;
+    color: #777;
+    text-shadow: 0 1px 0 #ffffff;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+}
+
+.navbar-btn {
+    margin-bottom: 0px;
+}
+
+.navbar ul.pull-right li a.dropdown-toggle {
+    margin-right: -20px;
+}
+.navbar ul.pull-right #fullscreener {
+    margin-right: -20px;
+    margin-left: 20px;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (min-width: 768px) and (max-width: 979px) {
+    .navbar-inverse .nav > li {
+        margin-left: 0;
+    }
+
+    .navbar .nav .dropdown-toggle {
+        color: #833c11;
+    }
+    .navbar .nav .dropdown-toggle .caret {
+        margin-top: 1px;
+        margin-left: 6px;
+        border-top-color: #f5a962;
+        border-bottom-color: #f5a962;
+    }
+
+    .navbar-inverse .dropdown-menu > li a {
+        color: #833c11;
+        text-shadow: none;
+        font-weight: bold;
+    }
+
+    .navbar-inverse .dropdown-menu .active > a {
+        color: #f5a962;
+        background-color: #fff !important;
+    }
+    .navbar-inverse .dropdown-menu li a.active, .navbar-inverse .dropdown-menu li a:hover, .navbar-inverse .dropdown-menu li a:focus {
+        color: #f5a962;
+        background-color: #fff !important;
+    }
+}
+@media (max-width: 767px) {
+    .navbar .navbar-inner {
+        padding-left: 25px;
+    }
+
+    #footer {
+        margin-left: -20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .brand {
+        margin-top: 20px;
+        background-position: 0 8px;
+    }
+
+    .nav-collapse.collapse ul {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 979px) {
+    .brand {
+        background-position: 0 8px;
+    }
+
+    .nav-collapse.collapse ul {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .navbar-fixed-top {
+        position: absolute;
+        margin-bottom: 0;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #footer {
+        margin-left: -20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .brand {
+        margin-top: 30px;
+        background-position: 0 8px;
+    }
+
+    .nav-collapse.collapse ul {
+        margin-top: 10px;
+    }
+
+    .header form {
+        display: block;
+        clear: right;
+        margin: 0 auto;
+    }
+}
+
+a:hover {
+        cursor: pointer;
+}
+
+.page-header {
+    margin:40px 0 20px;
+}
+
+.page-header {
+    overflow: hidden;
+    border-bottom: none;
+    padding: 0;
+    margin-top: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 20px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+
+.page-header h2 {
+    padding-top: 10px;
+    color: #1dc8b6;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    min-height: 60px;
+    display: inline-block;
+    padding-right: 20px;
+    float: left;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.collapse {
+    display: none;
+    visibility: hidden;
+}
+
+.collapse.in {
+    display: block;
+    visibility: visible;
+}

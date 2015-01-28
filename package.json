@@ -1,0 +1,23 @@
+{
+  "name": "ask-opentok",
+  "version": "0.0.0",
+  "description": "Open tok implementation for video conferencing ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ask-opentok-webrtc"
+  },
+  "keywords": [
+    "video",
+    "calling"
+  ],
+  "author": "ASK Fast",
+  "dependencies": {
+    "body-parser": "^1.10.2",
+    "express": "^4.11.1",
+    "opentok": "^2.2.4"
+  }
+}
